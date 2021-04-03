@@ -1,0 +1,116 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.5188471836470706 -0.8429292066707942 -0.14236555960922795 5.653806231704318
+  position 5.1804363094645804 4.1911269945959075 9.44445056430726
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+RectangleArena {
+  floorSize 10 10
+}
+Wall {
+  translation 0 0 -5
+  size 10 5 0.1
+}
+WoodenBox {
+  translation -1 0 2.5
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation 1.5 0 2.5
+  name "wooden box(1)"
+  size 0.5 0.5 0.5
+}
+UR10e {
+  translation -1 0.25 2.5
+  rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
+  toolSlot [
+    Robotiq3fGripper {
+    }
+  ]
+}
+Table {
+  translation -2.35068 0 2
+  size 2 0.25 4
+}
+ConveyorBelt {
+  translation 2.66727 -5.15144e-14 3.50921
+  rotation 0 1 0 3.14159
+  size 8 0.25 1
+  speed 0.1
+}
+UR5e {
+  translation 1.5 0.25 2.5
+  rotation -0.5773502691896258 -0.5773502691896258 -0.5773502691896258 2.0944
+  toolSlot [
+    Robotiq3fGripper {
+    }
+  ]
+}
+Ball {
+  translation 0 0.3 3.69414
+  color 0.666667 0 0
+}
+Ball {
+  translation 1 0.3 3.69414
+  name "ball(1)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 2 0.3 3.69414
+  name "ball(2)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 3 0.3 3.69414
+  name "ball(3)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 4 0.3 3.69414
+  name "ball(4)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 5 0.3 3.69414
+  name "ball(5)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 2.5 0.3 3.32
+  name "ball(6)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 3.5 0.3 3.32
+  name "ball(7)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 4.5 0.3 3.32
+  name "ball(8)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 5.5 0.3 3.32
+  name "ball(9)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 6.5 0.3 3.32
+  name "ball(10)"
+  color 0.666667 0 0
+}
+PlasticCrate {
+  translation -0.6 0 0
+}
+PlasticCrate {
+  translation 1.8 0 0
+  name "plastic crate(1)"
+}
