@@ -3,7 +3,7 @@ Final Project for CS 3302: A WeBots Carnival Throwing Game Simulation
 
 Hi Guys, I uploaded some very basic groundwork.
 
-Robots: UR10e and UR5e with the toolslot attachment: Robotiq3fGripper which is a claw with 3 fingers. 
+Robots: UR10e and UR5e with the toolslot attachment: Robotiq3fGripper which is a claw with 3 fingers. I am not sure what sensors are available, or specifically how we can use them to achieve our goal, this is a next step.
 
 Ball Placement: 
   1) We can use a table, but would have to place the balls along an arc which the robot has access to (since robot limbs are not extendable). 
