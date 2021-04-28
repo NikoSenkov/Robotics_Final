@@ -1,118 +1,203 @@
 #VRML_SIM R2021a utf8
 WorldInfo {
+  FPS 30
   coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      bounce 0.01
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+  ]
 }
 Viewpoint {
-  orientation -0.5827370581055166 0.7953707120211131 0.16674217093931423 0.6906720367038871
-  position 3.4133723960121842 7.026772428108612 11.661780785984579
+  orientation 0.9892473074400576 -0.1324774259239151 -0.06196366954248099 5.39985881230143
+  position 2.2325673231593863 15.405623751762677 8.733042202077632
+  followSmoothness 0.1
+  ambientOcclusionRadius 1
+  bloomThreshold 9
 }
 TexturedBackground {
+  reflections FALSE
 }
 TexturedBackgroundLight {
   castShadows FALSE
 }
 RectangleArena {
-  floorSize 10 10
-}
-Wall {
-  translation -5 0 0
-  rotation 0 1 0 1.57
-  size 10 5 0.1
-  appearance PaintedWood {
+  translation 0 -0.3 -1.31
+  name "rectangle arena(1)"
+  floorSize 13 5
+  floorAppearance Parquetry {
+    type "light strip"
   }
-}
-Wall {
-  translation 5 0 0
-  rotation 0 1 0 1.57
-  name "wall(2)"
-  size 10 5 0.1
-  appearance PaintedWood {
-  }
-}
-Wall {
-  translation 0 0 -5
-  name "wall(1)"
-  size 10 5 0.1
-  appearance PaintedWood {
-  }
+  wallThickness 0.1
 }
 WoodenBox {
-  translation -1 0 2.5
-  size 0.5 0.5 0.5
-}
-WoodenBox {
-  translation -0.94 1.74 3.75
-  name "wooden box(1)"
+  translation 0 1.75 1.25
   size 0.5 0.5 0.5
 }
 DEF ur10e UR10e {
-  translation -1 0.25 2.5
+  translation 0 2 1.25
   rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
-  controller "URE_Controller"
+  controller "UR_controller"
   supervisor TRUE
   toolSlot [
+    Receiver {
+      channel -1
+    }
     DEF DS DistanceSensor {
-      translation 0.005 0.11 0.05
-      rotation 0 0 1 1.57
+      translation -0.005 0.1 0.04
+      rotation 0.250750089097039 0.2505500890259746 0.9350663322496984 1.63709
     }
     DEF GRIP Robotiq3fGripper {
     }
   ]
 }
 ConveyorBelt {
-  translation 1 -5.15144e-14 3.69042
-  rotation 0 1 0 3.1415926535
-  size 4 0.25 0.065
-  borderHeight 1e-06
+  translation 3 1.77 2.4298
+  rotation 0 1 0 3.14159
+  size 5.222 0.226 0.035
+  borderThickness 0.001
+  borderHeight 0.002
   speed 0.2
 }
 Ball {
-  translation -0.25 0.281 3.69042
+  translation 0.75 2.03 2.4298
   color 0.666667 0 0
 }
 Ball {
-  translation 0.25 0.281 3.69042
+  translation 1.25 2.03 2.4298
   name "ball(1)"
   color 0.666667 0 0
 }
 Ball {
-  translation 0.75 0.281 3.69042
+  translation 1.75 2.03 2.4298
   name "ball(2)"
   color 0.666667 0 0
 }
 Ball {
-  translation 1.25 0.281 3.69042
+  translation 2.25 2.03 2.4298
   name "ball(3)"
   color 0.666667 0 0
 }
 Ball {
-  translation 1.75 0.281 3.69042
+  translation 2.75 2.03 2.4298
   name "ball(4)"
   color 0.666667 0 0
 }
-DEF ur5e UR5e {
-  translation -0.980001 1.99001 3.74
-  rotation -0.5773502691896258 -0.5773502691896258 -0.5773502691896258 2.0944
-  controller ""
-  toolSlot [
-    Robotiq3fGripper {
+Ball {
+  translation 3.25 2.03 2.4298
+  name "ball(5)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 3.75 2.03 2.4298
+  name "ball(6)"
+  color 0.666667 0 0
+}
+Ball {
+  translation 4.25 2.03 2.4298
+  name "ball(7)"
+  color 0.666667 0 0
+}
+DEF B2 PlasticCrate {
+  translation -4.02952 0.9 -1.35
+  name "plastic crate(10)"
+  size 0.6 0.4 0.6
+  color 0 0 0
+  mass 100
+}
+DEF B1 PlasticCrate {
+  translation -5.49952 0.9 -1.35
+  name "plastic crate(11)"
+  size 0.6 0.4 0.6
+  color 0 0 0
+  mass 100
+}
+DEF D1 PlasticCrate {
+  translation 4.07048 0.9 0.521544
+  name "plastic crate(3)"
+  size 0.6 0.4 0.6
+  color 0 0 0
+  mass 100
+}
+DEF D2 PlasticCrate {
+  translation 4.73 0.9 0.521544
+  name "plastic crate(5)"
+  size 0.6 0.4 0.6
+  color 0 0 0
+  mass 100
+}
+DEF D3 PlasticCrate {
+  translation 5.41 0.9 -0.138456
+  name "plastic crate(2)"
+  size 0.6 0.4 0.6
+  color 0 0 0
+  mass 100
+}
+DEF A3 PlasticCrate {
+  translation 5.5 0.9 -3.21
+  name "plastic crate(7)"
+  size 0.6 0.4 0.6
+  color 0 0 0
+  mass 100
+}
+DEF A1 PlasticCrate {
+  translation 4.01048 0.9 -3.21
+  name "plastic crate(8)"
+  size 0.6 0.4 0.6
+  color 0 0 0
+  mass 100
+}
+DEF A2 PlasticCrate {
+  translation 4.71 0.9 -2.67
+  name "plastic crate(9)"
+  size 0.6 0.4 0.6
+  color 0 0 0
+  mass 100
+}
+Moose {
+  translation -4.82 0.5 -1.33942
+  rotation 0 1 0 7.33682e-06
+  controller "SENSOR_controller"
+  bodySlot [
+    DistanceSensor {
+    }
+    GPS {
+    }
+    Emitter {
+      channel -1
     }
   ]
 }
-PlasticCrate {
-  translation -0.6 -0.0246473 -0.7
-  color 0 0 0
-  mass 100
+Moose {
+  translation 4.74 0.5 -2.91229
+  rotation 0 1 0 -3.1415853071795863
+  name "moose(2)"
+  controller "SENSOR_controller"
+  bodySlot [
+    DistanceSensor {
+    }
+    Emitter {
+      channel -1
+    }
+    GPS {
+    }
+  ]
 }
-PlasticCrate {
-  translation -1.8 -0.0246473 0
-  name "plastic crate(1)"
-  color 0 0 0
-  mass 100
-}
-PlasticCrate {
-  translation 0.6 -0.0246473 0
-  name "plastic crate(2)"
-  color 0 0 0
-  mass 100
+Moose {
+  translation 4.74111 0.5 0.240015
+  rotation 0 1 0 -3.1415853071795863
+  name "moose(1)"
+  controller "SENSOR_controller"
+  bodySlot [
+    DistanceSensor {
+    }
+    Emitter {
+      channel -1
+    }
+    GPS {
+    }
+  ]
 }
